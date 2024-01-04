@@ -5,11 +5,11 @@ const newArray = arr.sort((a,b)=> a-b)
 const n = newArray.length
 
 PlatziMath.calcularPromedio =function calcularPromedio(newArray) {
-    const initialValue = 0
-    const sumatoria = newArray.reduce((accum, current)=> accum + current,initialValue)    
-    return sumatoria / n
+    const sumatoria = newArray.reduce((accum, current)=> accum + current)    
+    const a = newArray.length
+    return sumatoria / a
 }
-    
+
 PlatziMath.calcularMediana= function calcularMediana(newArray) {
     const index= Math.floor(n/2)
     if (n%2 === 0) {
