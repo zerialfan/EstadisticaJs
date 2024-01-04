@@ -9,7 +9,7 @@ PlatziMath.calcularPromedio =function calcularPromedio(newArray) {
     const sumatoria = newArray.reduce((accum, current)=> accum + current,initialValue)    
     return sumatoria / n
 }
-
+    
 PlatziMath.calcularMediana= function calcularMediana(newArray) {
     const index= Math.floor(n/2)
     if (n%2 === 0) {
