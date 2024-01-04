@@ -83,19 +83,26 @@ function empresasLaboradas(nombrePersona) {
     return empresas
 }
 
-function salariosEmpresas(salarios) {
-    const salariosEmpresas= salarios.reduce((acc,persona)=>{
-        const trabajos = persona.trabajos
-        trabajos.forEach(trabajo => {
-            const {empresa, year, salario} = trabajo
+// function salariosEmpresas(salarios) {
+//     const salariosEmpresas= salarios.reduce((acc,persona)=>{
+//         const trabajos = persona.trabajos
+//         trabajos.forEach(item => {
+// /* Esta es una forma de estructurar
+// objetos que pertenecen a la misma propiedad que va a ser llamada desde
+// la funcion como parametro ejemplo
 
-            acc[empresa] = acc[empresa] || {}
+//     const empresa = item.empresa;
+//     cosnt year = item.year
+//     cosnt salario = item.salario*/
+//             const {empresa, year, salario} = item
 
-            acc[empresa][year] = acc[empresa][year] || []
+//             acc[empresa] = acc[empresa] || {}
 
-            acc[empresa][year].push(salario)
-        });
-        return acc
-    })
-    return salariosEmpresas
-}
+//             acc[empresa][year] = acc[empresa][year] || []
+
+//             acc[empresa][year].push(salario)
+//         });
+//         return acc
+//     })
+//     return salariosEmpresas
+// }
